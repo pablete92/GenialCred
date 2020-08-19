@@ -1,0 +1,15 @@
+{
+  "validation": {
+    "required": "Campo obligatorio",
+    "max50": "Maximo de 50 caracteres",
+    "min6": "Minimo de 6 caracteres"
+  },
+  "login": {
+    "title": "GenialCred",
+    "email": "Email",
+    "invalidEmail": "Email inválido",
+    "password": "Password",
+    "error": "Email y/o Password incorrecto",
+    "btn": "Ingresar"
+  }
+}

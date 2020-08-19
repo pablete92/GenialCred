@@ -1,6 +1,6 @@
 <template>
   <v-app class="primary split-bg">
-    <v-main>
+    <v-main class="primary">
       <v-container fluid fill-height>
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 lg4>

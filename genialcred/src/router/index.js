@@ -1,15 +1,22 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Vue from "vue";
+import Router from "vue-router";
+import { AuthLayout } from "@/components/layouts/index";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: "/",
+      name: "",
+      component: AuthLayout,
+      children: [
+        {
+          path: "/",
+          name: "Login",
+          component: () => import("@/views/Login")
+        }
+      ]
     }
   ]
-})
+});
