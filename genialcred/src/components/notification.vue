@@ -1,7 +1,7 @@
 <template>
   <v-snackbar v-model="show" :color="type">
     {{ message }}
-    <v-btn text @click.native="show = !show">{{ $t('btnClose') }}</v-btn>
+    <v-btn text @click.native="show = !show">{{ $t("btn.close") }}</v-btn>
   </v-snackbar>
 </template>
 
@@ -10,11 +10,11 @@ export default {
   name: "Snackbar",
   props: {
     messageProp: {
-      type: String,
+      type: String
     },
     typeProp: {
-      type: String,
-    },
+      type: String
+    }
   },
   created() {
     if (this.$store.getters.snack !== String.prototype.Empty) {
@@ -32,7 +32,7 @@ export default {
       set() {
         this.show = false;
         return this.$store.getters.snack;
-      },
+      }
     },
     type: {
       get() {
@@ -41,8 +41,8 @@ export default {
       set() {
         this.show = false;
         return this.$store.getters.snackType;
-      },
-    },
+      }
+    }
   },
   watch: {
     message(value) {
@@ -54,10 +54,10 @@ export default {
       if (value) {
         this.show = true;
       }
-    },
+    }
   },
   data: () => ({
-    show: false,
-  }),
+    show: false
+  })
 };
 </script>

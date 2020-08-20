@@ -82,6 +82,21 @@ export default {
         v => (v && v.length >= 6) || vm.$t("validation.min6")
       ]
     }
-  })
+  }),
+  methods: {
+    login() {
+      if (!this.$refs.form.validate()) {
+        return;
+      }
+
+      this.$store.dispatch("setLoader", true);
+      this.type = "error";
+      var snackbarOption = {
+        notification: this.error,
+        type: this.type
+      };
+      this.$store.dispatch("setSnackbar", snackbarOption);
+    }
+  }
 };
 </script>

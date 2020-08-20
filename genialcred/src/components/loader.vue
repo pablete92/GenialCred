@@ -1,8 +1,19 @@
 <template>
   <v-dialog v-model="show" fullscreen>
-    <v-layout justify-center align-center>
-      <v-progress-circular :size="70" :width="7" color="primary" indeterminate></v-progress-circular>
-    </v-layout>
+    <v-container
+      fluid
+      fill-height
+      style="background-color: rgba(255, 255, 255, 0.5);"
+    >
+      <v-layout justify-center align-center>
+        <v-progress-circular
+          :size="70"
+          :width="7"
+          color="primary"
+          indeterminate
+        ></v-progress-circular>
+      </v-layout>
+    </v-container>
   </v-dialog>
 </template>
 
@@ -10,7 +21,7 @@
 export default {
   name: "Loader",
   data: () => ({
-    show: false,
+    show: false
   }),
   computed: {
     isLoading: {
@@ -20,8 +31,8 @@ export default {
       set() {
         this.show = false;
         return this.$store.getters.isLoading;
-      },
-    },
+      }
+    }
   },
   created() {
     if (this.$store.getters.isLoading) {
@@ -31,7 +42,7 @@ export default {
   watch: {
     isLoading(value) {
       this.show = value;
-    },
-  },
+    }
+  }
 };
 </script>

@@ -4,6 +4,9 @@
     "max50": "Maximo de 50 caracteres",
     "min6": "Minimo de 6 caracteres"
   },
+  "btn": {
+    "close": "Cerrar"
+  },
   "login": {
     "title": "GenialCred",
     "email": "Email",
